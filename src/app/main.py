@@ -102,6 +102,10 @@ def create_vector_db(file_upload) -> Chroma:
 
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=7500, chunk_overlap=100)
     chunks = text_splitter.split_documents(data)
+    
+    for chunk in chunks:
+        logger.info(f"chain is {chunk}")
+
     logger.info("Document split into chunks")
 
     # Updated embeddings configuration with persistent storage
