@@ -2,6 +2,7 @@
 import subprocess
 import sys
 from pathlib import Path
+# python -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python run.py
 
 def main():
     """Run the Streamlit application."""
